@@ -34,8 +34,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content">
-                <div class="container-fluid">
+            <div class="content px-4 pb-4">
+                <div class="container-fluid shadow py-4 px-4">
                     @yield('content')
                     <!-- /.row -->
                 </div><!-- /.container-fluid -->
@@ -43,10 +43,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-
-        @include('admin.footer')
-
-        <!-- Main Footer -->
 
     </div>
     <!-- ./wrapper -->

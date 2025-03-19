@@ -10641,19 +10641,19 @@ max-height: 146px;
 
     .pagination a,
     .pagination span {
-        color: #007bff;
+        color: #1973a5;
         padding: 6px 12px;
         margin-right: 4px;
-        border: 1px solid #007bff;
+        border: 1px solid #1973a5;
         border-radius: 4px;
         cursor: pointer;
     }
 
     .pagination .active a,
     .pagination .active span {
-        background-color: #007bff;
+        background-color: #1973a5;
         color: #fff;
-        border-color: #007bff;
+        border-color: #1973a5;
         cursor: default;
     }
 
@@ -10864,7 +10864,7 @@ max-height: 146px;
     }
 
     button {
-        background-color: #007bff; /* Button color */
+        background-color: #1973a5; /* Button color */
         color: white; /* Text color */
         border: none; /* Remove border */
         padding: 10px 15px; /* Button padding */

@@ -8,6 +8,9 @@
 @section('content')
 
 <div class="card-body p-0">
+    <div class="d-flex justify-content-end mb-3">
+        <a href="/admin/introduces/add" class="btn btn-primary">Tạo trang</a>
+    </div>
     <table class="table table-striped projects">
         <thead>
             <tr>
@@ -19,7 +22,6 @@
             </tr>
         </thead>
         <tbody>
-
 
             @foreach($introduces as $key=> $policys)
 
@@ -39,9 +41,9 @@
 
 
                 <td class="project-actions text-right">
-                    <!-- <a class="btn btn-primary btn-sm" href="/admin/introduces/edit/{{$policys->id}}">
+                    <a class="btn btn-primary btn-sm" href="/admin/introduces/edit/{{$policys->id}}">
                         <i class="fas fa-edit"></i>
-                    </a> -->
+                    </a>
 
                     <a class="btn btn-danger btn-sm" href="#"
                         onclick="removeRow('{{ $policys->id }}', '/admin/introduces/destroy')">

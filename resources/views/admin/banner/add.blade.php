@@ -6,10 +6,10 @@
 @endsection
 
 @section('content')
-<div class="card-body">
+<div class="card-body p-0">
 
-    <div class="card-header">
-        <button type="button" class="btn btn-block btn-outline-primary btn-lg" data-toggle="modal" data-target="#modal-sm">Upload hình ảnh</button>
+    <div class="card-header px-0 pt-0">
+        <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#modal-sm">Upload hình ảnh</button>
     </div>
 
     <div class="card-body p-0">
@@ -44,7 +44,7 @@
                     <td>
                         <ul class="list-inline">
                             <li class="list-inline-item">
-                                <img src={{ "/storage/" . $item->thumb }} style="height: 100px">
+                                <img class="rounded" src={{ "/storage/" . $item->thumb }} style="height: 100px">
                             </li>
                         </ul>
                     </td>

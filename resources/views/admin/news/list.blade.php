@@ -6,9 +6,8 @@
 @endsection
 
 @section('content')
-<div class="card">
-    <div class="card-header">
-        <!-- <button type="button" class="btn btn-block btn-outline-primary btn-lg" data-toggle="modal" data-target="#modal-sm">Upload hình ảnh</button> -->
+    <div class="d-flex justify-content-end mb-3">
+        <a href="/admin/news/create" class="btn btn-primary">Tạo tin tức</a>
     </div>
     <div class="card-body p-0">
         <table class="table table-striped projects">
@@ -17,7 +16,7 @@
                     <th style="width: 1%">
                         ID
                     </th>
-                    <th style="width: 20%">
+                    <th style="width: 40%">
                         Tiêu đề
                     </th>
                     <th style="width: 20%">
@@ -25,9 +24,6 @@
                     </th>
                     <th style="width: 20%">
                         Ngày tạo
-                    </th>
-                    <th style="width: 20%">
-                        Ngày sửa
                     </th>
                     <th style="width: 20%">
                     </th>
@@ -43,15 +39,13 @@
                         </a>
                     </td>
                     <td>{{ $item->category }}</td>
-                    <td>{{ date_format(date_create($item->date),"H:i:s d/m/Y") }}</td>
-                    <td>{{ date_format(date_create($item->updated_at),"H:i:s d/m/Y") }}</td>
+                    <td>{{ date_format(date_create($item->date),"d/m/Y") }}</td>
                     <td class="project-actions text-right">
-                        <a class="btn btn-info btn-sm" href="/admin/news/edit/{{$item->id}}">
+                        <a class="btn btn-primary btn-sm" href="/admin/news/edit/{{$item->id}}">
                             <i class="fas fa-edit">
                             </i>
                             Sửa
                         </a>
-
                         <a class="btn btn-danger btn-sm" onclick="removeRow('{{ $item->id }}', '/admin/news/destroy')">
                             <i class="fas fa-trash">
                             </i>
@@ -68,7 +62,6 @@
         </div>
     </div>
     <!-- /.card-body -->
-</div>
 @endsection
 
 @section('admin.footer-js')

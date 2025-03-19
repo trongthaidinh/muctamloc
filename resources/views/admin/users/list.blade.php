@@ -6,13 +6,10 @@
 @endsection
 
 @section('content')
-<div class="card">
-    <div class="card-header">
-        <button type="button" class="btn btn-block btn-outline-primary btn-lg" data-toggle="modal"
+    <div class="card-header px-0 pt-0 d-flex justify-content-end">
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal"
             data-target="#modal-sm">Thêm người dùng mới</button>
     </div>
-    <?php
-    ?>
     <div class="card-body p-0">
         <table class="table table-striped projects">
             <thead>
@@ -39,11 +36,11 @@
                     <td>{{ $item->email }}</td>
 
                     <td class="project-actions text-right">
-                        <a class="btn btn-info btn-sm"
+                        <a class="btn btn-primary btn-sm"
                             onclick="updateRow('{{ $item->id }}', '/admin/user/reset-password')">
                             <i class="fas fa-edit">
                             </i>
-                            Reset
+                            Sửa
                         </a>
 
                         <a class="btn btn-danger btn-sm" onclick="removeRow('{{ $item->id }}', '/admin/user/destroy')">
@@ -110,7 +107,6 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-</div>
 @endsection
 
 @section('admin.footer-js')

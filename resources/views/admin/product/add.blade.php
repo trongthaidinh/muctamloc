@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-<div class="card-body">
+<div class="card-body p-0">
     <form action="" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-sm-6">
@@ -74,7 +74,7 @@
         </div>
 
 
-        <div class="card-footer">
+        <div class="card-footer bg-transparent mt-2 px-0">
             <button type="submit" class="btn btn-primary">Tạo sản phẩm</button>
         </div>
         @csrf

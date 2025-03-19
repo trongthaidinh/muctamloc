@@ -7,6 +7,9 @@
 
 @section('content')
 <div class="card-body p-0">
+    <div class="d-flex justify-content-end mb-3">
+        <a href="/admin/products/add" class="btn btn-primary">Tạo sản phẩm</a>
+    </div>
     <table class="table table-striped projects">
         <thead>
             <tr>
@@ -14,11 +17,9 @@
                 <th style="width: 15%">Tên sản phẩm</th>
                 <th style="width: 10%">Danh mục</th>
                 <th style="width: 10%">Giá </th>
-                <th style="width: 10%">SKU</th>
-                <th style="width: 10%">Active</th>
-                <th style="width: 10%">Update</th>
+                <th style="width: 10%">Hoạt động</th>
                 <th style="width: 20%">Thumb</th>
-                <th style="width: 20%">&nbsp;</th>
+                <th style="width: 20%"></th>
             </tr>
         </thead>
         <tbody>
@@ -28,10 +29,8 @@
                 <td>{{$product->id}}</td>
                 <td>{{$product->name}}</td>
                 <td>{{ optional($product->category)->name }}</td>
-                <td>{{$product->price}}</td>
-                <td>{{$product->SKU}}</td>
+                <td>{{ number_format($product->price, 0, ',', '.') }} VNĐ</td>
                 <td>{!! \App\Helpers\Helper::active($product->active) !!}</td>
-                <td>{{$product->updated_at}}</td>
                 <td>
                     @foreach (json_decode($product->imgPro) as $image)
                     <img src="{{ asset('images/' . $image->name) }}" width="100" alt="{{ $image->name }}">

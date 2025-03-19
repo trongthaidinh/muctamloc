@@ -7,6 +7,9 @@
 
 @section('content')
 <div class="card-body p-0">
+    <div class="d-flex justify-content-end mb-3">
+        <a href="/admin/categorys/add" class="btn btn-primary">Tạo danh mục</a>
+    </div>
     <table class="table table-striped projects">
         <thead>
             <tr>

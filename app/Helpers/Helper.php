@@ -5,7 +5,6 @@ namespace App\Helpers;
 use Illuminate\Support\Str;
 
 class Helper
-
 {
     public static function menu($menus, $parent_id = 0, $char = '')
     {
@@ -15,8 +14,8 @@ class Helper
                 $html .= '
                 <tr>
                 <td>' . $menu->id . '</td>
-                <td>' . $char  . $menu->name . '</td>
-                <td>' . self::active($menu->active)  . '</td>
+                <td>' . $char . $menu->name . '</td>
+                <td>' . self::active($menu->active) . '</td>
                 <td>' . $menu->updated_at . '</td>
                 <td> 
                 <a class="btn btn-primary btn-sm" href="/admin/menus/edit/' . $menu->id . '">
@@ -93,13 +92,9 @@ class Helper
         return $html;
     }
 
-
-
-
-
     public static function isChild($menus, $id)
     {
-        foreach ($menus as  $menu) {
+        foreach ($menus as $menu) {
             if ($menu->parent_id == $id) {
                 return true;
             }
