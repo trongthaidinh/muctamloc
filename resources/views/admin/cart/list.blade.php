@@ -22,7 +22,7 @@
             <td>{{$item->id}}</td>
             <td>{{$item->name}}</td>
             <td>{{$item->phone}}</td>
-            <td>{{$item->address}}</td>
+            <td style="max-width: 200px; word-wrap: break-word;">{{$item->address}}</td>
             <td>
                 <form action="/admin/cart/edit/{{$item->id}}" method="POST" class="order-form" data-id="{{$item->id}}">
                     <div class="btn-group d-flex flex-column" role="group" aria-label="Trạng thái đơn hàng">
