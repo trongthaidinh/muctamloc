@@ -12,7 +12,6 @@
             <th>Tên khách hàng</th>
             <th>Số điện thoại</th>
             <th>Địa chỉ</th>
-            <th>Tỉnh, thành phố</th>
             <th>Trạng thái</th>
             <th style="width: 200px;">Hành động</th>
         </tr>
@@ -24,7 +23,6 @@
             <td>{{$item->name}}</td>
             <td>{{$item->phone}}</td>
             <td>{{$item->address}}</td>
-            <td>{{$item->province}}</td>
             <td>
                 <form action="/admin/cart/edit/{{$item->id}}" method="POST" class="order-form" data-id="{{$item->id}}">
                     <div class="btn-group d-flex flex-column" role="group" aria-label="Trạng thái đơn hàng">
