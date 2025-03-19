@@ -4,11 +4,11 @@
     </script>
     <!-- <meta name="google-site-verification" content="HfROvt1w4yTDYnl06wno6qW5J8a8-sGip9K0y0zmycg" /> -->
 
-    <link rel="icon" type="image/png" href="{{ asset('/favicon-96x96.png') }}" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="{{ asset('/favicon.svg') }}" />
-    <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/apple-touch-icon.png') }}" />
-    <link rel="manifest" href="{{ asset('/site.webmanifest') }}" />
+        <link rel="icon" type="image/png" href="{{ secure_asset('/favicon-96x96.png') }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ secure_asset('/favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ secure_asset('/favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ secure_asset('/apple-touch-icon.png') }}" />
+    <link rel="manifest" href="{{ secure_asset('/site.webmanifest') }}" />
     <meta charset="utf-8" />
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
     <title>CÔNG TY TNHH THƯƠNG MẠI VÀ TỔNG HỢP TÂM LỘC</title>
@@ -76,15 +76,15 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Công ty TNHH Thương mại và Tổng hợp Tâm Lộc" />
-    <meta property="og:image" content="{{ asset('/logo-favicon.ico') }}" />
-    <meta property="og:image:secure_url" content="{{ asset('/logo-favicon.ico') }}" />
+    <meta property="og:image" content="{{ secure_asset('favicon.ico') }}" />
+    <meta property="og:image:secure_url" content="{{ secure_asset('/favicon.ico') }}" />
 
 
 
     <meta property="og:description"
         content="Công ty TNHH Thương mại và Tổng hợp Tâm Lộc chuyên cung cấp các sản phẩm chất lượng cao phục vụ nhu cầu đa dạng của khách hàng." />
 
-    <meta property="og:url" content="http://muctamloc.vn/" />
+    <meta property="og:url" content="https://muctamloc.vn/" />
     <meta property="og:site_name" content="Công ty TNHH Thương mại và Tổng hợp Tâm Lộc" />
 
 
@@ -98,7 +98,6 @@
 
     <link href='https://hstatic.net/0/0/global/design/theme-default/flexslider.css' rel='stylesheet' type='text/css'
         media='all' />
-    <link href='/style123321.css?version=123' rel='stylesheet' type='text/css' media='all' />
 
     <link href='https://theme.hstatic.net/1000162838/1000469515/14/sidebar.css?v=657' rel='stylesheet' type='text/css'
         media='all' />
