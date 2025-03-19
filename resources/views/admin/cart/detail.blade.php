@@ -21,11 +21,11 @@
     <table class="table">
         <tbody>
             <tr class="table_head">
-                <th class="column-1">Image</th>
-                <th class="column-2">Product</th>
-                <th class="column-3">Price</th>
-                <th class="column-4">Quantity</th>
-                <th class="column-5">Total</th>
+                <th class="column-1">Hình ảnh</th>
+                <th class="column-2">Sản phẩm</th>
+                <th class="column-3">Giá</th>
+                <th class="column-4">Số lượng</th>
+                <th class="column-5">Tổng</th>
             </tr>
             @foreach($cart as $carts )
             @php
@@ -45,20 +45,20 @@
                 </td>
                 <td class="column-2">{{$carts['product']->name}}</td>
                 <td class="column-3">
-                    {{number_format($priceEnd,0,'','.')}}
+                    {{number_format($priceEnd,0,'','.')}} VNĐ
                 </td>
                 <td class="column-4">
                     {{$carts['qty']}}
                 </td>
                 <td class="column-5">
-                    {{number_format($priceEnd,0,'','.')}}
+                    {{number_format($priceEnd,0,'','.')}} VNĐ
                 </td>
 
             </tr>
             @endforeach
             <tr>
                 <td colspan="4" class="text-right">Tổng tiền</td>
-                <td> {{number_format($total,0,'','.')}}</td>
+                <td> {{number_format($total,0,'','.')}} VNĐ</td>
             </tr>
         </tbody>
     </table>

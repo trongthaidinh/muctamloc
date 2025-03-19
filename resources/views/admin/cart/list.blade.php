@@ -12,7 +12,6 @@
             <th>Tên khách hàng</th>
             <th>Số điện thoại</th>
             <th>Địa chỉ</th>
-            <th>Email</th>
             <th>Tỉnh, thành phố</th>
             <th>Trạng thái</th>
             <th style="width: 200px;">Hành động</th>
@@ -25,21 +24,23 @@
             <td>{{$item->name}}</td>
             <td>{{$item->phone}}</td>
             <td>{{$item->address}}</td>
-            <td>{{$item->email}}</td>
             <td>{{$item->province}}</td>
             <td>
                 <form action="/admin/cart/edit/{{$item->id}}" method="POST" class="order-form" data-id="{{$item->id}}">
-                    <div class="btn-group" role="group" aria-label="Trạng thái đơn hàng">
+                    <div class="btn-group d-flex flex-column" role="group" aria-label="Trạng thái đơn hàng">
+                        <div class="d-flex">
                         <input type="radio" name="status" value="Chưa xong" id="status_delivering_{{$item->id}}"
                             class="order-status-radio" {{ $item->status == "Chưa xong" ? 'checked' : '' }}
                             onchange="updateStatus(this)">
-                        <label for="status_delivering_{{$item->id}}" class="btn btn-secondary btn-sm mr-2">Chưa
+                        <label for="status_delivering_{{$item->id}}" class="btn btn-secondary rounded btn-sm mr-1">Chưa
                             xong</label>
-
+                        </div>
+                        <div class="d-flex">
                         <input type="radio" name="status" value="Đã xong" id="status_completed_{{$item->id}}"
                             class="order-status-radio" {{ $item->status == "Đã xong" ? 'checked' : '' }}
                             onchange="updateStatus(this)">
-                        <label for="status_completed_{{$item->id}}" class="btn btn-info btn-sm">Đã xong</label>
+                        <label for="status_completed_{{$item->id}}" class="btn btn-info rounded btn-sm mr-1">Đã xong</label>
+                        </div>
                     </div>
 
                     @csrf
